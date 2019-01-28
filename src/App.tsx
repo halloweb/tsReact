@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-class App extends Component {
+import Input from './components/controls/input/index'
+class App extends Component<any, any> {
+  constructor(props:any) {
+    super(props)
+    this.handlerChange = this.handlerChange.bind(this)
+  }
+  handlerChange(e:React.ChangeEvent<HTMLInputElement>) {
+    console.log(e)
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <Input type="passWord" handlerChange = {this.handlerChange} ></Input>
         </header>
       </div>
     );
