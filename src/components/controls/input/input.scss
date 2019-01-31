@@ -1,0 +1,10 @@
+$activeColor: hsl(240,60,80) ;
+$errorColor: hsl(0, 80, 60) ;
+.tk_input {
+  border: 1px solid hsl(120, 50, 50);
+  transition: 1s;
+  &.active
+    {border-color:$activeColor;}
+  &.error
+    {border-color:$errorColor;}
+}
