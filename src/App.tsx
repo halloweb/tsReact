@@ -17,7 +17,7 @@ class App extends Component<any, any> {
     return (
       <div className="App">
         <header className="App-header">
-        <Input type="passWord" handlerBlur={this.handlerBlur}  handlerChange = {this.handlerChange} ></Input>
+        <Input type="passWord" blur={this.handlerBlur} required  onChange = {this.handlerChange} ></Input>
         </header>
       </div>
     );
